@@ -1,0 +1,24 @@
+#Cuerpo{
+    background-color: #FFF5E1;
+}
+
+#logo img{ 
+
+    max-width: 100%;
+    height: 60px;
+}
+
+
+/*
+Rosa Suave (#FFC0CB)
+
+Chocolate (#8B4513)
+
+para botones y elementos
+interactivos
+
+❖ Texto Principal:
+o Marrón Oscuro (#5D4037) para asegurar un buen contraste sobre el fondo claro.
+❖ Texto Secundario:
+o Gris Claro (#B0BEC5) para descripciones y texto secundario
+*/
