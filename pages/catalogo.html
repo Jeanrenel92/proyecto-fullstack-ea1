@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | 1000 Sabores</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/catalogo.css">
+</head>
+<body>
+
+    <div id="header"></div>
+
+    <main>
+        <section class="catalogo">
+            <div class="contenedor">
+
+                <div class="catalogo-encabezado">
+                    <span class="catalogo-etiqueta">NUESTROS PRODUCTOS</span>
+                    <h1>Catálogo de Productos</h1>
+                    <p>
+                        Descubre nuestra variedad de tortas, postres y productos
+                        preparados especialmente para ti.
+                    </p>
+                </div>
+
+                <div class="catalogo-filtros">
+
+                    <div class="buscador-productos">
+                        <label for="buscarProducto">Buscar producto</label>
+                        <input
+                            type="search"
+                            id="buscarProducto"
+                            placeholder="Buscar por nombre..."
+                        >
+                    </div>
+
+                    <div class="selector-categoria">
+                        <label for="filtrarCategoria">Categoría</label>
+                        <select id="filtrarCategoria">
+                            <option value="">Todas las categorías</option>
+                            <option value="Tortas Cuadradas">Tortas Cuadradas</option>
+                            <option value="Tortas Circulares">Tortas Circulares</option>
+                            <option value="Postres Individuales">Postres Individuales</option>
+                            <option value="Productos Sin Azúcar">Productos Sin Azúcar</option>
+                            <option value="Pastelería Tradicional">Pastelería Tradicional</option>
+                            <option value="Productos Sin Gluten">Productos Sin Gluten</option>
+                            <option value="Productos Vegana">Productos Vegana</option>
+                            <option value="Tortas Especiales">Tortas Especiales</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="productos-grid" id="listaProductos"></div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../js/components.js"></script>
+    <script src="../js/catalogo.js"></script>
+
+</body>
+</html>
