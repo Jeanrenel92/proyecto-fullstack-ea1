@@ -2,10 +2,9 @@
     background-color: #FFF5E1;
 }
 
-#logo img{ 
+#CuerpoCarro{
+    background-color: #FFF5E1;
 
-    max-width: 100%;
-    height: 60px;
 }
 
 /* 1. Prepara la imagen, fija su tamaño y permite la animación */
@@ -14,6 +13,10 @@
     height: 250px; /* Ajusta este valor en píxeles al tamaño ideal para tus pasteles */
     width: 100%; /* Asegura que no queden espacios blancos a los lados */
     object-fit: cover; /* Recorta el sobrante sin deformar la imagen */
+}
+
+#hero {
+    background: var(--rosa);
 }
 
 /*
