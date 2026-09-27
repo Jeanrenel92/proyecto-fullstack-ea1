@@ -193,8 +193,7 @@
 .historia-modal {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
     padding: 30px 20px;
@@ -212,35 +211,57 @@
 .historia-contenido {
     position: relative;
     width: 100%;
-    max-width: 800px;
+    max-width: 780px;
     max-height: 90vh;
-    padding: 35px;
+    padding: 40px 45px;
     overflow-y: auto;
     border-radius: 20px;
     background: var(--blanco);
+    box-shadow: 0 15px 50px rgba(93, 64, 55, 0.25);
 }
 
 .historia-contenido img {
     display: block;
     width: 100%;
-    max-height: 350px;
+    max-height: 320px;
+    margin: 0 auto 30px;
     object-fit: contain;
-    margin-bottom: 25px;
     border-radius: 15px;
 }
 
+.historia-contenido .blog-categoria {
+    display: block;
+    margin-bottom: 12px;
+}
+
 .historia-contenido h2 {
-    margin: 10px 0 20px;
+    max-width: 650px;
+    margin: 0 0 25px;
     color: var(--chocolate);
     font-family: 'Pacifico', cursive;
     font-size: 2.2rem;
     font-weight: 400;
+    line-height: 1.3;
 }
 
-.historia-contenido p {
+.historia-contenido #textoHistoria {
+    max-width: 680px;
+    margin: 0 auto;
     color: var(--texto);
+    font-size: 1rem;
     line-height: 1.8;
-    white-space: pre-line;
+    text-align: left;
+}
+
+.historia-contenido #textoHistoria p {
+    margin: 0 0 22px;
+    color: var(--texto);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.historia-contenido #textoHistoria p:last-child {
+    margin-bottom: 0;
 }
 
 .cerrar-historia {
@@ -255,23 +276,16 @@
     color: var(--chocolate);
     font-size: 1.2rem;
     cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .cerrar-historia:hover {
     background: var(--rosa-hover);
+    transform: scale(1.05);
 }
 
 @media (max-width: 768px) {
-    .historia-contenido {
-        padding: 25px 20px;
-    }
 
-    .historia-contenido h2 {
-        font-size: 1.8rem;
-    }
-}
-
-@media (max-width: 768px) {
     .blog-hero {
         padding: 60px 20px;
     }
@@ -301,5 +315,44 @@
 
     .blog-card > img {
         height: 250px;
+    }
+
+    .historia-modal {
+        padding: 20px 15px;
+    }
+
+    .historia-contenido {
+        max-height: 92vh;
+        padding: 30px 22px;
+        border-radius: 18px;
+    }
+
+    .historia-contenido img {
+        max-height: 250px;
+        margin-bottom: 25px;
+    }
+
+    .historia-contenido h2 {
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+    }
+
+    .historia-contenido #textoHistoria {
+        font-size: 0.95rem;
+        line-height: 1.75;
+    }
+
+    .historia-contenido #textoHistoria p {
+        margin-bottom: 18px;
+        font-size: 0.95rem;
+        line-height: 1.75;
+    }
+
+    .cerrar-historia {
+        top: 12px;
+        right: 12px;
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
     }
 }

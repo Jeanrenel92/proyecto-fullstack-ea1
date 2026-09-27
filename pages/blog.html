@@ -16,26 +16,41 @@
 
         <section class="blog-hero">
             <div class="contenedor">
-                <p class="blog-etiqueta">NUESTRO BLOG</p>
-                <h1>Un mundo lleno de dulces sabores</h1>
+
+                <p class="blog-etiqueta">
+                    NUESTRO BLOG
+                </p>
+
+                <h1>
+                    Un mundo lleno de dulces sabores
+                </h1>
+
                 <p>
                     Descubre historias, recetas, consejos y secretos
                     detrás de la pastelería 1000 Sabores.
                 </p>
+
             </div>
         </section>
 
 
         <section class="blog-destacado">
+
             <div class="contenedor blog-destacado-contenido">
 
                 <div class="blog-destacado-imagen">
+
                     <img src="../images/picture/portal_blog.png"
                          alt="Torta decorada de 1000 Sabores">
+
                 </div>
 
+
                 <div class="blog-destacado-texto">
-                    <span class="blog-categoria">HISTORIA DESTACADA</span>
+
+                    <span class="blog-categoria">
+                        HISTORIA DESTACADA
+                    </span>
 
                     <h2>
                         El arte detrás de una torta perfecta
@@ -51,17 +66,23 @@
                     <a href="#" class="btn-blog" id="leerHistoria">
                         Leer historia
                     </a>
+
                 </div>
 
             </div>
+
         </section>
 
 
         <section class="blog-historias">
+
             <div class="contenedor">
 
                 <div class="seccion-titulo">
-                    <p class="blog-etiqueta">NUESTRA HISTORIA</p>
+
+                    <p class="blog-etiqueta">
+                        NUESTRA HISTORIA
+                    </p>
 
                     <h2>
                         🎂 Historias de la pastelería
@@ -71,10 +92,12 @@
                         Conoce las historias, personas y momentos que
                         forman parte de 1000 Sabores.
                     </p>
+
                 </div>
 
 
                 <div class="blog-grid">
+
 
                     <article class="blog-card">
 
@@ -97,7 +120,9 @@
                                 transformó en un lugar lleno de sabores.
                             </p>
 
-                            <a href="#" class="blog-leer">
+                            <a href="#"
+                               class="blog-leer"
+                               data-historia="origen">
                                 Leer más →
                             </a>
 
@@ -127,7 +152,9 @@
                                 productos, descubre cómo trabajamos.
                             </p>
 
-                            <a href="#" class="blog-leer">
+                            <a href="#"
+                               class="blog-leer"
+                               data-historia="cocina">
                                 Leer más →
                             </a>
 
@@ -157,7 +184,9 @@
                                 que llega a nuestros clientes.
                             </p>
 
-                            <a href="#" class="blog-leer">
+                            <a href="#"
+                               class="blog-leer"
+                               data-historia="equipo">
                                 Leer más →
                             </a>
 
@@ -165,31 +194,47 @@
 
                     </article>
 
+
                 </div>
 
             </div>
+
         </section>
 
+
         <div id="historiaCompleta" class="historia-modal">
+
             <div class="historia-contenido">
-                <button id="cerrarHistoria" class="cerrar-historia">✕</button>
 
-                <img src="../images/picture/portal_blog.png"
-                    alt="Torta decorada de 1000 Sabores">
+                <button id="cerrarHistoria"
+                        class="cerrar-historia">
+                    ✕
+                </button>
 
-                <span class="blog-categoria">HISTORIA DESTACADA</span>
+                <img id="imagenHistoria"
+                     src="../images/picture/portal_blog.png"
+                     alt="Historia de 1000 Sabores">
 
-                <h2>El arte detrás de una torta perfecta</h2>
+                <span class="blog-categoria"
+                      id="categoriaHistoria">
+                    HISTORIA DESTACADA
+                </span>
 
-                <p id="textoHistoria"></p>
+                <h2 id="tituloHistoria">
+                    El arte detrás de una torta perfecta
+                </h2>
+
+                <div id="textoHistoria"></div>
+
             </div>
-        </div>
 
+        </div>
 
     </main>
 
 
     <div id="footer"></div>
+
 
     <script src="../js/components.js"></script>
     <script src="../js/blog.js"></script>
