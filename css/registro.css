@@ -1,0 +1,142 @@
+
+
+.registro-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.registro-card {
+    width: 100%;
+    max-width: 560px;
+    padding: 40px 45px;
+    background-color: var(--blanco);
+    border: 1px solid rgba(139, 69, 19, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(93, 64, 55, 0.15);
+}
+
+
+
+
+.registro-card h1 {
+    margin-bottom: 8px;
+    color: var(--chocolate);
+    font-family: 'Pacifico', cursive;
+    font-size: 34px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.registro-card > p {
+    margin-bottom: 30px;
+    color: var(--texto-secundario);
+    font-size: 15px;
+    text-align: center;
+}
+
+
+
+#registroForm {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo label {
+    color: var(--texto);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    height: 44px;
+    padding: 0 13px;
+    border: 1px solid #D8CFC8;
+    border-radius: 9px;
+    outline: none;
+    background-color: var(--blanco);
+    color: var(--texto);
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.campo input::placeholder {
+    color: #A9A09A;
+}
+
+.campo input:focus,
+.campo select:focus {
+    border-color: var(--rosa);
+    box-shadow: 0 0 0 3px rgba(255, 192, 203, 0.25);
+}
+
+
+
+
+.error {
+    min-height: 16px;
+    color: #B03A2E;
+    font-size: 13px;
+}
+
+
+
+
+#registroForm button {
+    width: 100%;
+    height: 46px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 9px;
+    background-color: var(--chocolate);
+    color: var(--blanco);
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+#registroForm button:hover {
+    background-color: var(--chocolate-oscuro);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(93, 64, 55, 0.20);
+}
+
+
+
+@media (max-width: 600px) {
+
+    .registro-container {
+        padding: 25px 15px;
+    }
+
+    .registro-card {
+        padding: 30px 25px;
+        border-radius: 15px;
+    }
+
+    .registro-card h1 {
+        font-size: 29px;
+    }
+
+    .registro-card > p {
+        margin-bottom: 25px;
+    }
+}
+
