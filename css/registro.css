@@ -3,41 +3,38 @@
 .registro-container {
     min-height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     padding: 40px 20px;
 }
-
-
-
 
 .registro-card {
     width: 100%;
     max-width: 560px;
-    background-color: var(--blanco);
     padding: 40px 45px;
+    background-color: var(--blanco);
+    border: 1px solid rgba(139, 69, 19, 0.12);
     border-radius: 18px;
     box-shadow: 0 8px 25px rgba(93, 64, 55, 0.15);
-    border: 1px solid rgba(139, 69, 19, 0.12);
 }
 
 
 
 
 .registro-card h1 {
-    text-align: center;
+    margin-bottom: 8px;
+    color: var(--chocolate);
     font-family: 'Pacifico', cursive;
     font-size: 34px;
     font-weight: 400;
-    color: var(--chocolate);
-    margin-bottom: 8px;
+    text-align: center;
 }
 
 .registro-card > p {
-    text-align: center;
+    margin-bottom: 30px;
     color: var(--texto-secundario);
     font-size: 15px;
-    margin-bottom: 30px;
+    text-align: center;
 }
 
 
@@ -48,9 +45,6 @@
     gap: 18px;
 }
 
-
-
-
 .campo {
     display: flex;
     flex-direction: column;
@@ -58,13 +52,10 @@
 }
 
 .campo label {
+    color: var(--texto);
     font-size: 15px;
     font-weight: 700;
-    color: var(--texto);
 }
-
-
-
 
 .campo input,
 .campo select {
@@ -73,20 +64,18 @@
     padding: 0 13px;
     border: 1px solid #D8CFC8;
     border-radius: 9px;
-    background-color: #FFFFFF;
+    outline: none;
+    background-color: var(--blanco);
     color: var(--texto);
     font-family: 'Lato', sans-serif;
     font-size: 15px;
-    outline: none;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    transition: border-color 0.2s ease,
+                box-shadow 0.2s ease;
 }
 
 .campo input::placeholder {
     color: #A9A09A;
 }
-
-
-
 
 .campo input:focus,
 .campo select:focus {
@@ -118,14 +107,16 @@
     font-size: 16px;
     font-weight: 700;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
 }
 
 #registroForm button:hover {
     background-color: var(--chocolate-oscuro);
     transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(93, 64, 55, 0.20);
 }
-
 
 
 
@@ -148,3 +139,4 @@
         margin-bottom: 25px;
     }
 }
+
