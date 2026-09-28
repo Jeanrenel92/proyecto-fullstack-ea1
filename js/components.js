@@ -19,10 +19,6 @@ const header = `
                 <li><a href="${base}pages/pedidos.html">Pedidos</a></li>
             </ul>
 
-            <a href="${base}pages/login.html" class="btn-login">
-                Iniciar sesión
-            </a>
-
             <a href="${base}pages/carrito.html" class="btn-carrito">
                 🛒
             </a>
@@ -73,7 +69,7 @@ const footer = `
     </div>
 
     <div class="footer-bottom">
-        <p>© 2026 1000 Sabores. Todos los derechos reservados.</p>
+        <p>© 2026 Todos los derechos reservados.</p>
     </div>
 </footer>
 `;

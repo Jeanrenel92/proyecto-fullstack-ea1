@@ -1,0 +1,34 @@
+#Cuerpo{
+    background-color: #FFF5E1;
+}
+
+#CuerpoCarro{
+    background-color: #FFF5E1;
+
+}
+
+/* 1. Prepara la imagen, fija su tamaño y permite la animación */
+.card-producto .card-img-top {
+    transition: transform 0.4s ease-in-out;
+    height: 250px; /* Ajusta este valor en píxeles al tamaño ideal para tus pasteles */
+    width: 100%; /* Asegura que no queden espacios blancos a los lados */
+    object-fit: cover; /* Recorta el sobrante sin deformar la imagen */
+}
+
+#hero {
+    background: var(--rosa);
+}
+
+/*
+Rosa Suave (#FFC0CB)
+
+Chocolate (#8B4513)
+
+para botones y elementos
+interactivos
+
+❖ Texto Principal:
+o Marrón Oscuro (#5D4037) para asegurar un buen contraste sobre el fondo claro.
+❖ Texto Secundario:
+o Gris Claro (#B0BEC5) para descripciones y texto secundario
+*/
