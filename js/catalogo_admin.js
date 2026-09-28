@@ -6,128 +6,128 @@ const productosIniciales = [
         categoria: "Tortas Cuadradas",
         nombre: "Torta Cuadrada de Chocolate",
         precio: 45000,
-        descripcion: "Deliciosa torta de chocolate con capas de ganache y un toque de avellanas. Personalizable con mensajes especiales.",
-        imagen: "TC001.png"
+        descripcion: "Deliciosa torta cuadrada de chocolate.",
+        imagen: "Torta Cuadrada de Chocolate.png"
     },
     {
         codigo: "TC002",
         categoria: "Tortas Cuadradas",
         nombre: "Torta Cuadrada de Frutas",
         precio: 50000,
-        descripcion: "Una mezcla de frutas frescas y crema chantilly sobre un suave bizcocho de vainilla, ideal para celebraciones.",
-        imagen: "TC002.jpg"
+        descripcion: "Torta cuadrada decorada con frutas frescas.",
+        imagen: "Torta Cuadrada de Frutas.png"
     },
     {
         codigo: "TT001",
         categoria: "Tortas Circulares",
         nombre: "Torta Circular de Vainilla",
         precio: 40000,
-        descripcion: "Bizcocho de vainilla clásico relleno con crema pastelera y cubierto con un glaseado dulce, perfecto para cualquier ocasión.",
-        imagen: "TT001.jpg"
+        descripcion: "Suave torta circular de vainilla.",
+        imagen: "Torta Circular de Vainilla.png"
     },
     {
         codigo: "TT002",
         categoria: "Tortas Circulares",
         nombre: "Torta Circular de Manjar",
         precio: 42000,
-        descripcion: "Torta tradicional chilena con manjar y nueces, un deleite para los amantes de los sabores dulces y clásicos.",
-        imagen: "TT002.jpg"
+        descripcion: "Torta circular rellena con delicioso manjar.",
+        imagen: "Torta Circular de Manjar.png"
     },
     {
         codigo: "PI001",
         categoria: "Postres Individuales",
         nombre: "Mousse de Chocolate",
         precio: 5000,
-        descripcion: "Postre individual cremoso y suave, hecho con chocolate de alta calidad, ideal para los amantes del chocolate.",
-        imagen: "PI001.jpg"
+        descripcion: "Cremoso mousse individual de chocolate.",
+        imagen: "Mousse de Chocolate.png"
     },
     {
         codigo: "PI002",
         categoria: "Postres Individuales",
         nombre: "Tiramisú Clásico",
         precio: 5500,
-        descripcion: "Un postre italiano individual con capas de café, mascarpone y cacao, perfecto para finalizar cualquier comida.",
-        imagen: "PI002.jpg"
+        descripcion: "Clásico tiramisú individual.",
+        imagen: "Tiramisú Clásico.png"
     },
     {
         codigo: "PSA001",
         categoria: "Productos Sin Azúcar",
         nombre: "Torta Sin Azúcar de Naranja",
         precio: 48000,
-        descripcion: "Torta ligera y deliciosa, endulzada naturalmente, ideal para quienes buscan opciones más saludables.",
-        imagen: "PSA001.jpg"
+        descripcion: "Torta de naranja preparada sin azúcar.",
+        imagen: "Torta Sin Azúcar de Naranja.png"
     },
     {
         codigo: "PSA002",
         categoria: "Productos Sin Azúcar",
         nombre: "Cheesecake Sin Azúcar",
         precio: 47000,
-        descripcion: "Suave y cremoso, este cheesecake es una opción perfecta para disfrutar sin culpa.",
-        imagen: "PSA002.jpg"
+        descripcion: "Cremoso cheesecake preparado sin azúcar.",
+        imagen: "Cheesecake Sin Azúcar.png"
     },
     {
         codigo: "PT001",
         categoria: "Pastelería Tradicional",
         nombre: "Empanada de Manzana",
         precio: 3000,
-        descripcion: "Pastelería tradicional rellena de manzanas especiadas, perfecta para un dulce desayuno o merienda.",
-        imagen: "PT001.jpg"
+        descripcion: "Tradicional empanada rellena de manzana.",
+        imagen: "Empanada de Manzana.png"
     },
     {
         codigo: "PT002",
         categoria: "Pastelería Tradicional",
         nombre: "Tarta de Santiago",
         precio: 6000,
-        descripcion: "Tradicional tarta española hecha con almendras, azúcar, y huevos, una delicia para los amantes de los postres clásicos.",
-        imagen: "PT002.jpg"
+        descripcion: "Tradicional tarta de Santiago.",
+        imagen: "Tarta de Santiago.png"
     },
     {
         codigo: "PG001",
         categoria: "Productos Sin Gluten",
         nombre: "Brownie Sin Gluten",
         precio: 4000,
-        descripcion: "Rico y denso, este brownie es perfecto para quienes necesitan evitar el gluten sin sacrificar el sabor.",
-        imagen: "PG001.jpg"
+        descripcion: "Delicioso brownie preparado sin gluten.",
+        imagen: "Brownie Sin Gluten.png"
     },
     {
         codigo: "PG002",
         categoria: "Productos Sin Gluten",
         nombre: "Pan Sin Gluten",
         precio: 3500,
-        descripcion: "Suave y esponjoso, ideal para sándwiches o para acompañar cualquier comida.",
-        imagen: "PG002.jpg"
+        descripcion: "Pan artesanal preparado sin gluten.",
+        imagen: "Pan Sin Gluten.png"
     },
     {
         codigo: "PV001",
         categoria: "Productos Vegana",
         nombre: "Torta Vegana de Chocolate",
         precio: 50000,
-        descripcion: "Torta de chocolate húmeda y deliciosa, hecha sin productos de origen animal, perfecta para veganos.",
-        imagen: "PV001.jpg"
+        descripcion: "Torta de chocolate preparada completamente con ingredientes veganos.",
+        imagen: "Torta Vegana de Chocolate.png"
     },
     {
         codigo: "PV002",
         categoria: "Productos Vegana",
         nombre: "Galletas Veganas de Avena",
         precio: 4500,
-        descripcion: "Crujientes y sabrosas, estas galletas son una excelente opción para un snack saludable y vegano.",
-        imagen: "PV002.jpg"
+        descripcion: "Galletas de avena preparadas con ingredientes veganos.",
+        imagen: "Galletas Veganas de Avena.png"
     },
     {
         codigo: "TE001",
         categoria: "Tortas Especiales",
         nombre: "Torta Especial de Cumpleaños",
         precio: 55000,
-        descripcion: "Diseñada especialmente para celebraciones, personalizable con decoraciones y mensajes únicos.",
-        imagen: "TE001.jpg"
+        descripcion: "Torta especial para celebraciones de cumpleaños.",
+        imagen: "Torta Especial de Cumpleaños.png"
     },
     {
         codigo: "TE002",
         categoria: "Tortas Especiales",
         nombre: "Torta Especial de Boda",
         precio: 60000,
-        descripcion: "Elegante y deliciosa, esta torta está diseñada para ser el centro de atención en cualquier boda.",
-        imagen: "TE002.jpg"
+        descripcion: "Torta especial diseñada para celebraciones de boda.",
+        imagen: "Torta Especial de Boda.png"
     }
 ];
 
@@ -153,25 +153,7 @@ const descripcion = document.getElementById("descripcion");
 const imagen = document.getElementById("imagen");
 
 function cargarProductos() {
-    const productosGuardados = localStorage.getItem(CLAVE_PRODUCTOS);
-
-    if (!productosGuardados) {
-        productos = [...productosIniciales];
-        guardarProductos();
-        return;
-    }
-
-    try {
-        productos = JSON.parse(productosGuardados);
-
-        if (!Array.isArray(productos)) {
-            productos = [...productosIniciales];
-            guardarProductos();
-        }
-    } catch (error) {
-        productos = [...productosIniciales];
-        guardarProductos();
-    }
+    productos = [...productosIniciales];
 }
 
 function guardarProductos() {
@@ -251,7 +233,6 @@ function mostrarProductos() {
 
             <td>
                 <div class="acciones-producto">
-
                     <button
                         type="button"
                         class="btn-editar"
@@ -265,7 +246,6 @@ function mostrarProductos() {
                         data-codigo="${producto.codigo}">
                         Eliminar
                     </button>
-
                 </div>
             </td>
         `;
@@ -404,7 +384,7 @@ function actualizarProducto(event) {
 
     const indice = productos.findIndex(
         producto => producto.codigo === productoEditando
-    );  
+    );
 
     if (indice === -1) {
         return;
