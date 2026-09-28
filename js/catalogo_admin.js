@@ -7,7 +7,7 @@ const productosIniciales = [
         nombre: "Torta Cuadrada de Chocolate",
         precio: 45000,
         descripcion: "Deliciosa torta de chocolate con capas de ganache y un toque de avellanas. Personalizable con mensajes especiales.",
-        imagen: "TC001.jpg"
+        imagen: "TC001.png"
     },
     {
         codigo: "TC002",
@@ -404,7 +404,7 @@ function actualizarProducto(event) {
 
     const indice = productos.findIndex(
         producto => producto.codigo === productoEditando
-    );
+    );  
 
     if (indice === -1) {
         return;
