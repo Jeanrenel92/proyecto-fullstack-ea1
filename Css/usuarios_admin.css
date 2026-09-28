@@ -1,0 +1,308 @@
+
+
+.usuarios-admin {
+    padding: 45px 0;
+    min-height: 70vh;
+}
+
+.usuarios-encabezado {
+    margin-bottom: 25px;
+}
+
+.usuarios-encabezado span {
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 5px 10px;
+    background-color: #f3e6d8;
+    color: #8b5e3c;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.usuarios-encabezado h1 {
+    margin: 0 0 8px;
+    font-size: 30px;
+    color: #333;
+}
+
+.usuarios-encabezado p {
+    margin: 0;
+    color: #777;
+    font-size: 14px;
+}
+
+
+
+.usuarios-panel {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+
+
+.usuarios-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.usuarios-toolbar input {
+    width: 280px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+}
+
+.usuarios-toolbar input:focus {
+    border-color: #b88968;
+}
+
+.usuarios-toolbar button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #8b5e3c;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.usuarios-toolbar button:hover {
+    background-color: #70482d;
+}
+
+
+
+
+.formulario-usuario {
+    display: none;
+    margin-bottom: 20px;
+    padding: 18px;
+    border: 1px solid #e5ddd6;
+    border-radius: 7px;
+    background-color: #faf8f6;
+}
+
+.formulario-usuario.activo {
+    display: block;
+}
+
+.formulario-usuario-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+.formulario-usuario-encabezado span {
+    color: #8b5e3c;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.formulario-usuario-encabezado h2 {
+    margin: 4px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.formulario-usuario-encabezado p {
+    margin: 0;
+    color: #777;
+    font-size: 13px;
+}
+
+.formulario-usuario-encabezado button {
+    border: none;
+    background: none;
+    color: #777;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+
+
+
+.formulario-usuario-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+}
+
+.formulario-usuario-grid .campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario-usuario-grid label {
+    margin-bottom: 5px;
+    color: #555;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.formulario-usuario-grid input,
+.formulario-usuario-grid select {
+    padding: 9px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    font-size: 13px;
+    outline: none;
+}
+
+.formulario-usuario-grid input:focus,
+.formulario-usuario-grid select:focus {
+    border-color: #b88968;
+}
+
+.formulario-usuario-grid .error {
+    min-height: 15px;
+    margin-top: 4px;
+    color: #c94c4c;
+    font-size: 11px;
+}
+
+
+
+
+.formulario-usuario-acciones {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.btn-guardar-usuario,
+.btn-cancelar-usuario {
+    padding: 9px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.btn-guardar-usuario {
+    background-color: #8b5e3c;
+    color: white;
+}
+
+.btn-guardar-usuario:hover {
+    background-color: #70482d;
+}
+
+.btn-cancelar-usuario {
+    background-color: #e5e5e5;
+    color: #555;
+}
+
+.btn-cancelar-usuario:hover {
+    background-color: #d8d8d8;
+}
+
+
+
+.tabla-contenedor {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabla-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.tabla-usuarios th {
+    padding: 11px 10px;
+    text-align: left;
+    background-color: #f7f3ef;
+    color: #555;
+    font-weight: bold;
+}
+
+.tabla-usuarios td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.tabla-usuarios tbody tr:hover {
+    background-color: #fafafa;
+}
+
+
+
+.cambiar-tipo {
+    padding: 6px 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+
+
+
+.btn-eliminar {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #c94c4c;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.btn-eliminar:hover {
+    background-color: #a83c3c;
+}
+
+
+
+@media (max-width: 768px) {
+
+    .usuarios-admin {
+        padding: 30px 0;
+    }
+
+    .usuarios-encabezado h1 {
+        font-size: 25px;
+    }
+
+    .usuarios-panel {
+        padding: 15px;
+    }
+
+    .usuarios-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .usuarios-toolbar input {
+        width: auto;
+    }
+
+    .usuarios-toolbar button {
+        width: 100%;
+    }
+
+    .tabla-usuarios {
+        min-width: 650px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .formulario-usuario-grid {
+        grid-template-columns: 1fr;
+    }
+}

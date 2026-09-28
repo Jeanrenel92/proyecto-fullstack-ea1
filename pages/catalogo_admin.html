@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo Admin | 1000 Sabores</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/catalogo_admin.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <main>
+        <section class="catalogo-admin">
+            <div class="contenedor">
+                <div class="catalogo-admin-encabezado">
+                    <span class="catalogo-admin-etiqueta">ADMINISTRACIÓN</span>
+                    <h1>Catálogo de Productos</h1>
+                    <p>Gestiona los productos de Pastelería 1000 Sabores.</p>
+                </div>
+
+                <div class="catalogo-admin-formulario" id="formularioContenedor">
+                    <div class="formulario-encabezado">
+                        <h2 id="tituloFormulario">Agregar producto</h2>
+                        <button type="button" class="btn-cerrar-formulario" id="btnCerrarFormulario">✕</button>
+                    </div>
+
+                    <form id="formularioProducto">
+                        <div class="formulario-grid">
+                            <div class="campo">
+                                <label for="codigo">Código</label>
+                                <input type="text" id="codigo" name="codigo" placeholder="Ej: TC001" required>
+                            </div>
+
+                            <div class="campo">
+                                <label for="categoria">Categoría</label>
+                                <select id="categoria" name="categoria" required>
+                                    <option value="">Seleccionar categoría</option>
+                                    <option value="Tortas Cuadradas">Tortas Cuadradas</option>
+                                    <option value="Tortas Circulares">Tortas Circulares</option>
+                                    <option value="Postres Individuales">Postres Individuales</option>
+                                    <option value="Productos Sin Azúcar">Productos Sin Azúcar</option>
+                                    <option value="Pastelería Tradicional">Pastelería Tradicional</option>
+                                    <option value="Productos Sin Gluten">Productos Sin Gluten</option>
+                                    <option value="Productos Vegana">Productos Vegana</option>
+                                    <option value="Tortas Especiales">Tortas Especiales</option>
+                                </select>
+                            </div>
+
+                            <div class="campo">
+                                <label for="nombre">Nombre del producto</label>
+                                <input type="text" id="nombre" name="nombre" placeholder="Ej: Torta Cuadrada de Chocolate" required>
+                            </div>
+
+                            <div class="campo">
+                                <label for="precio">Precio (CLP)</label>
+                                <input type="number" id="precio" name="precio" min="0" placeholder="Ej: 45000" required>
+                            </div>
+
+                            <div class="campo campo-completo">
+                                <label for="descripcion">Descripción</label>
+                                <textarea id="descripcion" name="descripcion" rows="4" placeholder="Describe el producto..." required></textarea>
+                            </div>
+
+                            <div class="campo campo-completo">
+                                <label for="imagen">Imagen del producto</label>
+                                <input type="text" id="imagen" name="imagen" placeholder="Ej: TC001.jpg" required>
+                                <small>La imagen debe estar ubicada en images/picture/</small>
+                            </div>
+                        </div>
+
+                        <div class="formulario-acciones">
+                            <button type="submit" class="btn-admin" id="btnGuardar">Agregar producto</button>
+                            <button type="button" class="btn-admin btn-cancelar" id="btnCancelar">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="catalogo-admin-listado">
+                    <div class="listado-encabezado">
+                        <div>
+                            <span class="catalogo-admin-etiqueta">PRODUCTOS</span>
+                            <h2>Productos registrados</h2>
+                        </div>
+
+                        <div class="listado-filtros">
+                            <input type="search" id="buscarProducto" placeholder="Buscar producto...">
+
+                            <select id="filtrarCategoria">
+                                <option value="">Todas las categorías</option>
+                                <option value="Tortas Cuadradas">Tortas Cuadradas</option>
+                                <option value="Tortas Circulares">Tortas Circulares</option>
+                                <option value="Postres Individuales">Postres Individuales</option>
+                                <option value="Productos Sin Azúcar">Productos Sin Azúcar</option>
+                                <option value="Pastelería Tradicional">Pastelería Tradicional</option>
+                                <option value="Productos Sin Gluten">Productos Sin Gluten</option>
+                                <option value="Productos Vegana">Productos Vegana</option>
+                                <option value="Tortas Especiales">Tortas Especiales</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn-agregar-producto" id="btnAgregarProducto">+ Agregar nuevo producto</button>
+
+                    <div class="tabla-contenedor">
+                        <table class="tabla-productos">
+                            <thead>
+                                <tr>
+                                    <th>Imagen</th>
+                                    <th>Código</th>
+                                    <th>Categoría</th>
+                                    <th>Producto</th>
+                                    <th>Precio</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="listaProductos"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../js/components.js"></script>
+    <script src="../js/catalogo_admin.js"></script>
+</body>
+</html>

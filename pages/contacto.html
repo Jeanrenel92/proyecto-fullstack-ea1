@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto | 1000 Sabores</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/contacto.css">
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+    <main>
+        <section class="contacto">
+            <div class="contenedor">
+
+                <div class="contacto-encabezado">
+                    <span class="contacto-etiqueta">CONTÁCTANOS</span>
+                    <h1>Estamos para ayudarte</h1>
+                    <p>
+                        Si tienes alguna consulta, quieres realizar un pedido
+                        o necesitas más información sobre nuestros productos,
+                        escríbenos.
+                    </p>
+                </div>
+
+                <div class="contacto-contenido">
+
+                    <div class="contacto-informacion">
+                        <h2>Información de contacto</h2>
+
+                        <div class="contacto-dato">
+                            <strong>Dirección</strong>
+                            <p>Maipú 1020, San Bernardo, Región Metropolitana, Chile</p>
+                        </div>
+
+                        <div class="contacto-dato">
+                            <strong>Teléfono</strong>
+                            <p>+56 9 1234 5678</p>
+                        </div>
+
+                        <div class="contacto-dato">
+                            <strong>Correo electrónico</strong>
+                            <p>contacto@1000sabores.cl</p>
+                        </div>
+
+                        <div class="contacto-dato">
+                            <strong>Horario de atención</strong>
+                            <p>Lunes a sábado: 09:00 - 19:00 hrs.</p>
+                        </div>
+
+                        <div class="contacto-ubicacion">
+                            <h2>Ubicación</h2>
+                            <div class="mapa">
+                                <iframe
+                                    src="https://www.google.com/maps?q=Maip%C3%BA%201020%2C%20San%20Bernardo%2C%20Chile&output=embed"
+                                    loading="lazy"
+                                    allowfullscreen>
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contacto-formulario">
+                        <h2>Envíanos un mensaje</h2>
+
+                        <form id="formularioContacto">
+
+                            <div class="campo">
+                                <label for="nombre">Nombre</label>
+                                <input
+                                    type="text"
+                                    id="nombre"
+                                    name="nombre"
+                                    placeholder="Tu nombre">
+                            </div>
+
+                            <div class="campo">
+                                <label for="correo">Correo electrónico</label>
+                                <input
+                                    type="email"
+                                    id="correo"
+                                    name="correo"
+                                    placeholder="tu@email.com">
+                            </div>
+
+                            <div class="campo">
+                                <label for="asunto">Asunto</label>
+                                <input
+                                    type="text"
+                                    id="asunto"
+                                    name="asunto"
+                                    placeholder="Asunto del mensaje">
+                            </div>
+
+                            <div class="campo">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea
+                                    id="mensaje"
+                                    name="mensaje"
+                                    rows="7"
+                                    placeholder="Escribe tu mensaje..."></textarea>
+                            </div>
+
+                            <button type="submit">Enviar mensaje</button>
+                            <p id="mensajeFormulario"></p>
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer"></div>
+
+    <script src="../js/components.js"></script>
+    <script src="../js/contacto.js"></script>
+
+</body>
+</html>

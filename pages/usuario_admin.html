@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestión de Usuarios | 1000 Sabores</title>
+
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/usuarios_admin.css">
+
+</head>
+
+<body>
+
+    <div id="header"></div>
+
+
+    <main>
+
+        <section class="usuarios-admin">
+
+            <div class="contenedor">
+
+                <div class="usuarios-encabezado">
+
+                    <span>ADMINISTRACIÓN</span>
+
+                    <h1>Gestión de Usuarios</h1>
+
+                    <p>
+                        Administra las cuentas y permisos de los usuarios.
+                    </p>
+
+                </div>
+
+
+                <div class="usuarios-panel">
+
+                    <div class="usuarios-toolbar">
+
+                        <input
+                            type="search"
+                            id="buscarUsuario"
+                            placeholder="Buscar usuario..."
+                        >
+
+                        <button
+                            type="button"
+                            id="btnCrearUsuario">
+                            + Crear usuario
+                        </button>
+
+                    </div>
+
+
+                    <div
+                        class="formulario-usuario"
+                        id="formularioUsuario">
+
+                        <div class="formulario-usuario-encabezado">
+
+                            <div>
+
+                                <span>ADMINISTRACIÓN</span>
+
+                                <h2>Crear usuario</h2>
+
+                                <p>
+                                    Completa los datos para crear una nueva cuenta.
+                                </p>
+
+                            </div>
+
+                            <button
+                                type="button"
+                                id="btnCerrarFormulario">
+                                ✕
+                            </button>
+
+                        </div>
+
+
+                        <form id="formCrearUsuario">
+
+                            <div class="formulario-usuario-grid">
+
+
+                                <div class="campo">
+
+                                    <label for="nuevoRun">
+                                        RUN
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="nuevoRun"
+                                        maxlength="9"
+                                        placeholder="Ej: 12345678K"
+                                    >
+
+                                    <span
+                                        class="error"
+                                        id="errorNuevoRun">
+                                    </span>
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="nuevoNombre">
+                                        Nombre
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="nuevoNombre"
+                                        maxlength="50"
+                                        placeholder="Nombre"
+                                    >
+
+                                    <span
+                                        class="error"
+                                        id="errorNuevoNombre">
+                                    </span>
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="nuevoApellidos">
+                                        Apellidos
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="nuevoApellidos"
+                                        maxlength="100"
+                                        placeholder="Apellidos"
+                                    >
+
+                                    <span
+                                        class="error"
+                                        id="errorNuevoApellidos">
+                                    </span>
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="nuevoCorreo">
+                                        Correo
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        id="nuevoCorreo"
+                                        maxlength="100"
+                                        placeholder="ejemplo@gmail.com"
+                                    >
+
+                                    <span
+                                        class="error"
+                                        id="errorNuevoCorreo">
+                                    </span>
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="nuevoContrasena">
+                                        Contraseña
+                                    </label>
+
+                                    <input
+                                        type="password"
+                                        id="nuevoContrasena"
+                                        minlength="4"
+                                        maxlength="10"
+                                        placeholder="4 a 10 caracteres"
+                                    >
+
+                                    <span
+                                        class="error"
+                                        id="errorNuevoContrasena">
+                                    </span>
+
+                                </div>
+
+
+                                <div class="campo">
+
+                                    <label for="nuevoTipo">
+                                        Tipo de usuario
+                                    </label>
+
+                                    <select id="nuevoTipo">
+
+                                        <option value="">
+                                            Seleccionar tipo
+                                        </option>
+
+                                        <option value="cliente">
+                                            Cliente
+                                        </option>
+
+                                        <option value="admin">
+                                            Admin
+                                        </option>
+
+                                    </select>
+
+                                    <span
+                                        class="error"
+                                        id="errorNuevoTipo">
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="formulario-usuario-acciones">
+
+                                <button
+                                    type="submit"
+                                    class="btn-guardar-usuario">
+                                    Crear usuario
+                                </button>
+
+                                <button
+                                    type="button"
+                                    class="btn-cancelar-usuario"
+                                    id="btnCancelarFormulario">
+                                    Cancelar
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+
+                    <div class="tabla-contenedor">
+
+                        <table class="tabla-usuarios">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>RUN</th>
+
+                                    <th>Nombre</th>
+
+                                    <th>Correo</th>
+
+                                    <th>Tipo</th>
+
+                                    <th>Acciones</th>
+
+                                </tr>
+
+                            </thead>
+
+                            <tbody id="listaUsuarios"></tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <div id="footer"></div>
+
+
+    <script src="../js/components.js"></script>
+    <script src="../js/usuarios_admin.js"></script>
+
+</body>
+</html>
