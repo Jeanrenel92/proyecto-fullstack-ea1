@@ -24,3 +24,26 @@ document.addEventListener("DOMContentLoaded", () => {
         contenedor.innerHTML = htmlTarjetas;
     }
 });
+
+function agregarAlCarrito(idProducto, nombre, precio, imagen) {
+    // Busca si el producto ya existe en el carrito
+    const productoExistente = carritoCompras.find(p => p.id === idProducto);
+    
+    if (productoExistente) {
+        productoExistente.cantidad += 1;
+    } else {
+        carritoCompras.push({
+            id: idProducto,
+            nombre: nombre,
+            precio: precio,
+            imagen: imagen,
+            cantidad: 1
+        });
+    }
+    
+    renderizarCarrito();
+    
+    // Opcional: Abrir el panel automáticamente al agregar
+    const panel = new bootstrap.Offcanvas(document.getElementById('panelCarrito'));
+    panel.show();
+}
