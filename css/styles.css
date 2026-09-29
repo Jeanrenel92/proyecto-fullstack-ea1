@@ -107,6 +107,12 @@ nav {
      background-color: var(--rosa);
 }
 
+#fondo{
+     background-color: var(--crema);
+}
+
+--rosa-hover
+
 .btn-login {
     display: inline-flex;
     align-items: center;
