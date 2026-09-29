@@ -15,7 +15,37 @@
 </head>
 <body class id="Cuerpo">
   <!-- Header referencia al headerMain.htlm-->
-    <div id="header"></div>
+    <div id="header">
+        <!-- 1. Actualiza tu botón del carrito en header.html -->
+<!-- Nota: Se cambian los atributos data-bs para conectar con el panel lateral -->
+<a href="#" class="btn-carrito" aria-label="Carrito de compras" data-bs-toggle="offcanvas" data-bs-target="#panelCarrito">
+    🛒 <span id="contador-carrito" class="badge bg-danger rounded-pill">0</span>
+</a>
+
+<!-- 2. Pega este código del Offcanvas al final de tu header.html -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="panelCarrito" aria-labelledby="tituloCarrito">
+    <div class="offcanvas-header border-bottom">
+        <!-- Título dinámico como en tu referencia -->
+        <h5 class="offcanvas-title fw-bold" id="tituloCarrito">Tienes <span id="cantidad-total">0</span> productos</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    
+    <!-- Contenedor donde JavaScript inyectará los productos -->
+    <div class="offcanvas-body" id="contenedor-items-carrito">
+        <p class="text-center text-muted mt-5">Tu carrito está vacío.</p>
+    </div>
+    
+    <!-- Footer con los botones de acción -->
+    <div class="offcanvas-footer p-3 border-top">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <a href="#" id="btn-vaciar" class="text-danger text-decoration-none small">Vaciar carro</a>
+            <h6 class="fw-bold mb-0">Total: $<span id="precio-total">0</span></h6>
+        </div>
+        <!-- Botón para ir al checkout final -->
+        <a href="/pages/carrito.html" class="btn btn-danger w-100 fw-bold">Continuar</a>
+    </div>
+</div>
+    </div>
 
     <main>
       <section>
@@ -43,144 +73,10 @@
         </section>
 
 
-          <section id="productos" class="container my-5">
-                <!-- row-cols-1 en móvil, row-cols-md-3 en PC. g-4 da el espacio exacto entre las cards -->
-              <div class="row row-cols-1 row-cols-md-3 g-4">
-                  
-                  <!-- Tarjeta de Producto 1 -->
-                  <div class="col">
-                      <!-- Añadimos una clase personalizada 'card-producto' para el CSS -->
-                      <div class="card h-100 shadow-sm border-0 card-producto">
-                          
-                          <!-- IMPORTANTE: overflow-hidden evita que la imagen sobresalga al agrandarse -->
-                          <div class="overflow-hidden rounded-top">
-                              <img src="./Img/producto1.png" class="card-img-top" alt="Producto Mil Sabores">
-                          </div>
-                          
-                          <div class="card-body text-center">
-                              <h5 class="card-title fw-bold">Torta de Chocolate</h5>
-                              <p class="card-text text-muted">$15.000</p>
-                              
-                              <!-- stretched-link expande el área de clic a toda la etiqueta .card padre -->
-                              <!-- El href por ahora puede ser un #, luego lo cambiarás con JS -->
-                              <a href="#detalle" class="stretched-link"></a>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col">
-                      <div class="card h-100 shadow-sm border-0 card-producto">
-                          <div class="overflow-hidden rounded-top">
-                              <img src="./Img/tortacuadradadechocolate.jpg" class="Torta Cuadrada de Chocolate" alt="Producto Mil Sabores">
-                          </div>
-                          <div class="card-body text-center">
-                              <h5 class="card-title fw-bold">Torta Cuadrada de Chocolate</h5>
-                              <p class="card-text text-muted">$15.000</p>
-                              <!-- El href por ahora puede ser un #, luego lo cambiarás con JS -->
-                              <a href="#detalle" class="stretched-link"></a>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col">
-                      <div class="card h-100 shadow-sm border-0 card-producto">
-                          <div class="overflow-hidden rounded-top">
-                              <img src="./Img/producto1.png" class="card-img-top" alt="Producto Mil Sabores">
-                          </div>
-                          <div class="card-body text-center">
-                              <h5 class="card-title fw-bold">Torta de Chocolate</h5>
-                              <p class="card-text text-muted">$15.000</p>
-                              <!-- El href por ahora puede ser un #, luego lo cambiarás con JS -->
-                              <a href="#detalle" class="stretched-link"></a>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col">
-                      <div class="card h-100 shadow-sm border-0 card-producto">
-                          <div class="overflow-hidden rounded-top">
-                              <img src="./Img/producto1.png" class="card-img-top" alt="Producto Mil Sabores">
-                          </div>
-                          <div class="card-body text-center">
-                              <h5 class="card-title fw-bold">Torta de Chocolate</h5>
-                              <p class="card-text text-muted">$15.000</p>
-                              <!-- El href por ahora puede ser un #, luego lo cambiarás con JS -->
-                              <a href="#detalle" class="stretched-link"></a>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col">
-                      <div class="card h-100 shadow-sm border-0 card-producto">
-                          <div class="overflow-hidden rounded-top">
-                              <img src="./Img/producto1.png" class="card-img-top" alt="Producto Mil Sabores">
-                          </div>
-                          <div class="card-body text-center">
-                              <h5 class="card-title fw-bold">Torta de Chocolate</h5>
-                              <p class="card-text text-muted">$15.000</p>
-                              <!-- El href por ahora puede ser un #, luego lo cambiarás con JS -->
-                              <a href="#detalle" class="stretched-link"></a>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col">
-                      <div class="card h-100 shadow-sm border-0 card-producto">
-                          <div class="overflow-hidden rounded-top">
-                              <img src="./Img/producto1.png" class="card-img-top" alt="Producto Mil Sabores">
-                          </div>
-                          <div class="card-body text-center">
-                              <h5 class="card-title fw-bold">Torta de Chocolate</h5>
-                              <p class="card-text text-muted">$15.000</p>
-                              <!-- El href por ahora puede ser un #, luego lo cambiarás con JS -->
-                              <a href="#detalle" class="stretched-link"></a>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col">
-                      <div class="card h-100 shadow-sm border-0 card-producto">
-                          <div class="overflow-hidden rounded-top">
-                              <img src="./Img/producto1.png" class="card-img-top" alt="Producto Mil Sabores">
-                          </div>
-                          <div class="card-body text-center">
-                              <h5 class="card-title fw-bold">Torta de Chocolate</h5>
-                              <p class="card-text text-muted">$15.000</p>
-                              <!-- El href por ahora puede ser un #, luego lo cambiarás con JS -->
-                              <a href="#detalle" class="stretched-link"></a>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col">
-                      <div class="card h-100 shadow-sm border-0 card-producto">
-                          <div class="overflow-hidden rounded-top">
-                              <img src="./Img/producto1.png" class="card-img-top" alt="Producto Mil Sabores">
-                          </div>
-                          <div class="card-body text-center">
-                              <h5 class="card-title fw-bold">Torta de Chocolate</h5>
-                              <p class="card-text text-muted">$15.000</p>
-                              <!-- El href por ahora puede ser un #, luego lo cambiarás con JS -->
-                              <a href="#detalle" class="stretched-link"></a>
-                          </div>
-                      </div>
-                  </div>
-
-                  <div class="col">
-                      <div class="card h-100 shadow-sm border-0 card-producto">
-                          <div class="overflow-hidden rounded-top">
-                              <img src="./Img/producto1.png" class="card-img-top" alt="Producto Mil Sabores">
-                          </div>
-                          <div class="card-body text-center">
-                              <h5 class="card-title fw-bold">Torta de Chocolate</h5>
-                              <p class="card-text text-muted">$15.000</p>
-                              <!-- El href por ahora puede ser un #, luego lo cambiarás con JS -->
-                              <a href="#detalle" class="stretched-link"></a>
-                          </div>
-                      </div>
-                  </div>
-
-                  
+          <section id="producto" class="container my-5">
+                    <div id="contenedor-productos" class="row row-cols-1 row-cols-md-3 g-4">
+                        <!-- Las cards estaran aqui -->
+                    </div>
 
                   
               </div>
@@ -194,10 +90,13 @@
     </footer>
 
 
-
+    <!-- catalogo de admin -->
+     <script src="/js/catalogo_admin.js"></script>
+     <!-- renderizado  -->
+      <script src="/js/render_catalogo.js"></script>
     <!-- Bootstrap  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <!-- Referencia al Header -->
+    <!-- Referencia al Header y footer-->
     <script src="./js/components.js"></script>
 </body>
 </html>

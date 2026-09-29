@@ -14,9 +14,8 @@ const header = `
                 <li><a href="${base}index.html">Inicio</a></li>
                 <li><a href="${base}pages/nosotros.html">Sobre nosotros</a></li>
                 <li><a href="${base}pages/catalogo.html">Productos</a></li>
-                <li><a href="${base}pages/blog.html">Nuestro Blog</a></li>
+                <li><a href="${base}pages/blog.html">Blog</a></li>
                 <li><a href="${base}pages/contacto.html">Contactanos</a></li>
-                <li><a href="${base}pages/pedidos.html">Pedidos</a></li>
             </ul>
 
             <a href="${base}pages/carrito.html" class="btn-carrito">

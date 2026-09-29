@@ -103,6 +103,15 @@ nav {
     transform: translateY(-2px);
 }
 
+#contenedor-productos{
+     background-color: var(--rosa);
+}
+
+#fondo{
+     background-color: var(--crema);
+}
+
+
 .btn-login {
     display: inline-flex;
     align-items: center;
