@@ -17,6 +17,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Lato', sans-serif;
     background-color: var(--crema);
@@ -24,6 +28,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    padding-top: 90px;
 }
 
 .contenedor {
@@ -33,9 +38,14 @@ body {
 }
 
 .header {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    min-height: 90px;
     background-color: var(--crema);
     border-bottom: 2px solid var(--rosa);
+    z-index: 1000;
 }
 
 .header > .contenedor {
@@ -85,6 +95,7 @@ nav {
 }
 
 .menu a {
+    position: relative;
     display: block;
     padding: 10px 12px;
     color: var(--texto);
@@ -103,14 +114,29 @@ nav {
     transform: translateY(-2px);
 }
 
-#contenedor-productos{
-     background-color: var(--rosa);
+.menu a.activo {
+    background-color: var(--rosa);
+    color: var(--chocolate);
 }
 
-#fondo{
-     background-color: var(--crema);
+.menu a.activo::after {
+    content: "";
+    position: absolute;
+    left: 12px;
+    right: 12px;
+    bottom: 3px;
+    height: 3px;
+    border-radius: 3px;
+    background-color: var(--chocolate);
 }
 
+#contenedor-productos {
+    background-color: var(--rosa);
+}
+
+#fondo {
+    background-color: var(--crema);
+}
 
 .btn-login {
     display: inline-flex;
@@ -128,7 +154,8 @@ nav {
                 transform 0.25s ease,
                 box-shadow 0.25s ease;
 }
-.btn-registro{
+
+.btn-registro {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -145,7 +172,7 @@ nav {
                 box-shadow 0.25s ease;
 }
 
-.btn-productos{
+.btn-productos {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -159,10 +186,10 @@ nav {
     white-space: nowrap;
     transition: background-color 1s ease,
                 transform 0.25s ease,
-                box-shadow 0.25s ease;    
+                box-shadow 0.25s ease;
 }
 
-.btn-carro-hedear{
+.btn-carro-hedear {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -176,22 +203,22 @@ nav {
     white-space: nowrap;
     transition: background-color 1s ease,
                 transform 0.25s ease,
-                box-shadow 0.25s ease;    
+                box-shadow 0.25s ease;
 }
 
-.btn-carro-hedear:hover{
+.btn-carro-hedear:hover {
     background-color: var(--chocolate-oscuro);
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(93, 64, 55, 0.25);
 }
 
-.btn-productos:hover{
+.btn-productos:hover {
     background-color: var(--chocolate-oscuro);
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(93, 64, 55, 0.25);
 }
 
-.btn-registro:hover{
+.btn-registro:hover {
     background-color: var(--chocolate-oscuro);
     transform: translateY(-2px);
     box-shadow: 0 4px 10px rgba(93, 64, 55, 0.25);
@@ -204,6 +231,7 @@ nav {
 }
 
 .btn-carrito {
+    position: relative;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -224,6 +252,12 @@ nav {
     background-color: var(--chocolate);
     color: var(--blanco);
     transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 4px 10px rgba(93, 64, 55, 0.25);
+}
+
+.btn-carrito.activo {
+    background-color: var(--chocolate);
+    color: var(--blanco);
     box-shadow: 0 4px 10px rgba(93, 64, 55, 0.25);
 }
 
@@ -314,12 +348,25 @@ main {
     font-size: 14px;
     line-height: 1.5;
 }
-/* para adaptar a dispositivo moviles (Responsive Design)*/
+
 @media (max-width: 1100px) {
+
+    .header {
+        position: fixed;
+    }
+
     .header > .contenedor {
         flex-direction: column;
         padding: 20px 0;
         gap: 18px;
+    }
+
+    .header {
+        min-height: auto;
+    }
+
+    body {
+        padding-top: 145px;
     }
 
     nav {
@@ -334,6 +381,16 @@ main {
 }
 
 @media (max-width: 700px) {
+
+    .header > .contenedor {
+        padding: 15px 0;
+        gap: 12px;
+    }
+
+    body {
+        padding-top: 155px;
+    }
+
     .menu {
         flex-wrap: wrap;
         justify-content: center;
