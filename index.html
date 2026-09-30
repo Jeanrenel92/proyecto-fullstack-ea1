@@ -16,35 +16,6 @@
 <body class id="Cuerpo">
   <!-- Header referencia al headerMain.htlm-->
     <div id="header">
-        <!-- 1. Actualiza tu botón del carrito en header.html -->
-<!-- Nota: Se cambian los atributos data-bs para conectar con el panel lateral -->
-<a href="#" class="btn-carrito" aria-label="Carrito de compras" data-bs-toggle="offcanvas" data-bs-target="#panelCarrito">
-    🛒 <span id="contador-carrito" class="badge bg-danger rounded-pill">0</span>
-</a>
-
-<!-- 2. Pega este código del Offcanvas al final de tu header.html -->
-<div class="offcanvas offcanvas-end" tabindex="-1" id="panelCarrito" aria-labelledby="tituloCarrito">
-    <div class="offcanvas-header border-bottom">
-        <!-- Título dinámico como en tu referencia -->
-        <h5 class="offcanvas-title fw-bold" id="tituloCarrito">Tienes <span id="cantidad-total">0</span> productos</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
-    </div>
-    
-    <!-- Contenedor donde JavaScript inyectará los productos -->
-    <div class="offcanvas-body" id="contenedor-items-carrito">
-        <p class="text-center text-muted mt-5">Tu carrito está vacío.</p>
-    </div>
-    
-    <!-- Footer con los botones de acción -->
-    <div class="offcanvas-footer p-3 border-top">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <a href="#" id="btn-vaciar" class="text-danger text-decoration-none small">Vaciar carro</a>
-            <h6 class="fw-bold mb-0">Total: $<span id="precio-total">0</span></h6>
-        </div>
-        <!-- Botón para ir al checkout final -->
-        <a href="/pages/carrito.html" class="btn btn-danger w-100 fw-bold">Continuar</a>
-    </div>
-</div>
     </div>
 
     <main>
@@ -55,40 +26,92 @@
               </div>
       </section>
 
-        <section id="hero" class="container-fluid ">
-            <div class="container">       
-                <div class="row align-items-center">
-                    <div class="col-md-6 p-5">
-                        <h1 class="">Mil Sabores</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi inventore cumque, fuga provident nulla dicta. Laborum a atque aspernatur accusantium deleniti, assumenda in cumque, obcaecati cupiditate voluptas ipsa eos at.</p>
-                        <a href="./pages/catalogo.html" class="btn-carro-hedear">⬇ Ver Productos</a>
-
-                    </div>
-                    <!-- col md 6 corre la imagen al lado -->
-                    <div class="col-md-6 px-0">
-                      <img src="./Img/milsabores.png" alt="Imagen de los pasteles" class="img-fluid w-100">
-                    </div>
+<section id="hero" class="container-fluid py-5">
+    <div class="container my-4">       
+        <div class="row align-items-center">
+            <!-- Columna de Texto -->
+            <div class="col-md-6 p-4 p-md-5 text-center text-md-start">
+                
+                <h1 class="display-3 fw-bold mb-3 text-dark">
+                    Bienvenido a <br> <span class="text-danger">Mil Sabores</span>
+                </h1>
+                
+                <p class=" fs-5">
+                    Transformamos los mejores ingredientes en momentos inolvidables. Descubre nuestra selección de pasteles y dulces artesanales, perfectos para endulzar cualquier celebración.
+                </p>
+                
+                <div class="d-flex justify-content-center justify-content-md-start gap-3 mt-4">
+                    <a href="./pages/catalogo.html" class="btn btn-danger btn-lg rounded-pill px-4 shadow-sm fw-bold">
+                        <i class="bi bi-cart3 me-2"></i> Ver Catálogo
+                    </a>
+                    <a href="./pages/nosotros.html" class="btn btn-outline-secondary btn-lg rounded-pill px-4 fw-bold">
+                        Conócenos
+                    </a>
                 </div>
             </div>
-        </section>
+            
+            <!-- Columna de Imagen -->
+            <div class="col-md-6 px-3 px-md-0 mt-5 mt-md-0 text-center">
+                <!-- Se agregó un borde redondeado y sombra a la imagen para integrarla mejor -->
+                <img src="./Img/milsabores.png" alt="Equipo de pasteleros 1000 Sabores" class="img-fluid rounded-4 shadow-lg" style="max-height: 500px; object-fit: cover;">
+            </div>
+        </div>
+    </div>
+</section>
 
         <!-- Video de promocion -->
         <section class="container my-5">
             <h2 class="text-center mb-4">Bienvenido/a</h2>
             <div class="ratio ratio-16x9 shadow rounded overflow-hidden">
-                <iframe src="https://www.youtube.com/embed/TQp-Lvh_eKQ?si=ldYyemrMJ4bOa8x?autoplay=1&mute=1" title="Video Promocional 1000 Sabores" allowfullscreen></iframe>
+                <iframe src="https://www.youtube.com/embed/TQp-Lvh_eKQ?si=ldYyemrMJ4bOa8x-?autoplay=1&mute=1" title="Video Promocional 1000 Sabores" allowfullscreen></iframe>
+            </div>
+        </section>
+            
+        <section class="container my-5 py-5 border-top">
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <i class="bi bi-truck text-danger" style="font-size: 3rem;"></i>
+                    <h4 class="mt-3">Envío Rápido</h4>
+                    <p class="text-muted">Despachamos tus pedidos con cuidado para que lleguen perfectos a tu puerta.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <i class="bi bi-star text-danger" style="font-size: 3rem;"></i>
+                    <h4 class="mt-3">Calidad Premium</h4>
+                    <p class="text-muted">Utilizamos ingredientes seleccionados y de la más alta calidad en cada receta.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <i class="bi bi-heart text-danger" style="font-size: 3rem;"></i>
+                    <h4 class="mt-3">Hecho con Amor</h4>
+                    <p class="text-muted">Cada pastel es decorado a mano por nuestros expertos pasteleros.</p>
+                </div>
             </div>
         </section>
 
+        <!-- Sección Productos Destacados -->
+<section id="productos-destacados" class="container my-5 pt-4">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Nuestros Productos Destacados</h2>
+        <p class="text-muted">Las tortas favoritas de nuestros clientes, listas para llevar.</p>
+    </div>
+    
+    <!-- El contenedor donde JS inyectará las tarjetas -->
+    <div id="contenedor-productos" class="row row-cols-1 row-cols-md-3 g-4 pb-5">
+    </div>
+    
+    <div class="text-center mt-5">
+        <a href="./pages/catalogo.html" class="btn btn-outline-danger btn-lg rounded-pill px-4 fw-bold">Ver Catálogo Completo</a>
+    </div>
+</section>
 
-          <section id="producto" class="container my-5">
-                    <div id="contenedor-productos" class="row row-cols-1 row-cols-md-3 g-4">
-                        <!-- Las cards estaran aqui -->
-                    </div>
+<!-- Sección Call to Action (CTA) -->
+<section class="container-fluid bg-danger text-white py-5 my-5 text-center shadow-sm">
+    <div class="container py-4">
+        <h2 class="fw-bold mb-3">¿Aún no eres parte de 1000 Sabores?</h2>
+        <p class="fs-5 mb-4">Regístrate hoy mismo y obtén un <strong>10% de descuento</strong> en tu primer pedido. ¡No te quedes sin tu pastel favorito!</p>
+        <a href="./pages/registro.html" class="btn btn-light btn-lg fw-bold text-danger rounded-pill px-5 shadow">Crear mi cuenta</a>
+    </div>
+</section>
 
-                  
-              </div>
-          </section>
 
     </main>
 
@@ -97,14 +120,17 @@
       <div id="footer"></div>
     </footer>
 
-
-    <!-- catalogo de admin -->
-     <script src="/js/catalogo_admin.js"></script>
-     <!-- renderizado  -->
-      <script src="/js/render_catalogo.js"></script>
-    <!-- Bootstrap  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <!-- Referencia al Header y footer-->
     <script src="./js/components.js"></script>
+    <!-- catalogo de admin -->
+     <script src="./js/catalogo_admin.js"></script>
+     <!-- carrito -->
+      <script src="./proyecto-fullstack-ea1/js/carrito.js"></script>
+     <!-- renderizado  -->
+      <script src="./js/render_catalogo.js"></script>
+
+    <!-- Bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
 </body>
 </html>

@@ -19,7 +19,7 @@
         <h2 class="text-center mb-4">Nuestro Catálogo</h2>
         
         <!-- Este es el contenedor vacío. Mantén las clases de la grilla de Bootstrap -->
-        <div id="contenedor-productos" class="row row-cols-1 row-cols-md-3 g-4">
+        <div id="contenedor-productos" class="row row-cols-1 row-cols-md-3 g-4 pb-5">
             <!-- Las cards se inyectarán aquí automáticamente -->
         </div>
     </main>
@@ -29,11 +29,36 @@
         <div id="footer"></div>
     </footer>
 
-    <script src="../js/components.js"></script>
-    <script src="../js/catalogo_admin.js"></script>
-    <script src="../js/render_catalogo.js"></script>
+        <!-- Modal de Detalles del Producto -->
+    <div class="modal fade" id="modalDetalleProducto" tabindex="-1" aria-labelledby="modalTitulo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-0">
+                    <h5 class="modal-title fw-bold" id="modalTitulo">Nombre del Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body text-center pt-0">
+                    <img id="modalImagen" src="" class="img-fluid rounded mb-3 shadow-sm w-100 img-modal" alt="Producto">
+                    <h4 class="text-danger fw-bold mb-3">$<span id="modalPrecio">0</span></h4>
+                    <p id="modalDescripcion" class="text-muted text-start">Descripción del producto aquí...</p>
+                </div>
+                <div class="modal-footer border-top-0">
+                    <button type="button" class="btn btn-outline-secondary w-100" data-bs-dismiss="modal">Seguir comprando</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
       <!-- bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <!-- componente para el footer y el header -->
+    <script src="../js/components.js"></script>
+    <!-- catalogo de admin -->
+     <script src="../js/catalogo_admin.js"></script>
+      <!-- Carga el carrito -->
+    <script src="../js/carrito.js"></script>        
+     <!-- renderizado  -->
+      <script src="../js/render_catalogo.js"></script>
 
 </body>
 </html>

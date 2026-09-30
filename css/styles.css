@@ -11,6 +11,21 @@
     --blanco: #FFFFFF;
 }
 
+.img-catalogo {
+    height: 200px;
+    object-fit: contain;
+}
+
+.img-modal {
+    height: 250px;
+    object-fit: contain;
+}
+
+.card-producto {
+    /* Elige tu color hexadecimal, rgb o nombre de color */
+    background-color: #ffdde1 !important; 
+}
+
 * {
     margin: 0;
     padding: 0;

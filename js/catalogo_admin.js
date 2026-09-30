@@ -138,6 +138,11 @@ const formularioContenedor = document.getElementById("formularioContenedor");
 const formularioProducto = document.getElementById("formularioProducto");
 const tituloFormulario = document.getElementById("tituloFormulario");
 const btnGuardar = document.getElementById("btnGuardar");
+
+if (btnGuardar) {
+    btnGuardar.addEventListener('click', function() {
+    });
+}
 const btnAgregarProducto = document.getElementById("btnAgregarProducto");
 const btnCerrarFormulario = document.getElementById("btnCerrarFormulario");
 const btnCancelar = document.getElementById("btnCancelar");
@@ -429,18 +434,23 @@ function eliminarProducto(codigoProducto) {
     mostrarProductos();
 }
 
-formularioProducto.addEventListener("submit", event => {
-    if (productoEditando) {
-        actualizarProducto(event);
-    } else {
-        agregarProducto(event);
-    }
-});
+// Verificamos si el formulario existe en la página antes de agregarle el evento
+if (formularioProducto) {
+    formularioProducto.addEventListener("submit", event => {
+        if (productoEditando) {
+            actualizarProducto(event);
+        } else {
+            agregarProducto(event);
+        }
+    });
+}
 
-btnAgregarProducto.addEventListener(
-    "click",
-    mostrarFormularioAgregar
-);
+if (btnAgregarProducto) {
+    btnAgregarProducto.addEventListener(
+        "click",
+        mostrarFormularioAgregar
+    );
+}
 
 btnCerrarFormulario.addEventListener(
     "click",
