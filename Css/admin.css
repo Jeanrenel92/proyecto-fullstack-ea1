@@ -1,0 +1,197 @@
+.admin-contenido {
+    display: flex;
+    width: 100%;
+    min-height: 650px;
+    background: var(--crema);
+}
+
+#admin-menu {
+    flex: 0 0 250px;
+    width: 250px;
+}
+
+.admin-menu {
+    width: 250px;
+    min-height: 650px;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 30px 18px;
+    background: var(--chocolate);
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-menu-logo {
+    margin-bottom: 35px;
+    text-align: center;
+}
+
+.admin-menu-logo h2 {
+    margin: 0;
+    color: var(--blanco);
+    font-family: "Pacifico", cursive;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.admin-menu-logo span {
+    color: var(--blanco);
+    font-size: 0.75rem;
+    opacity: 0.8;
+}
+
+.admin-menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin-menu-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.2s ease;
+}
+
+.admin-menu-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.admin-menu-link.activo {
+    background: var(--rosa);
+    color: var(--chocolate);
+    font-weight: 700;
+}
+
+.admin-menu-footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.admin-dashboard {
+    flex: 1;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 50px;
+}
+
+.admin-encabezado {
+    max-width: 900px;
+    margin: 0 auto 40px;
+}
+
+.admin-encabezado span {
+    color: var(--chocolate);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.admin-encabezado h1 {
+    margin: 8px 0 10px;
+    color: var(--chocolate);
+    font-family: "Pacifico", cursive;
+    font-size: 2.7rem;
+    font-weight: 400;
+}
+
+.admin-encabezado p {
+    margin: 0;
+    color: var(--texto);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.admin-opciones {
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.admin-card {
+    padding: 30px;
+    border-radius: 16px;
+    background: var(--blanco);
+    box-shadow: 0 8px 25px rgba(93, 64, 55, 0.08);
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(93, 64, 55, 0.14);
+}
+
+.admin-card > span {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 2.2rem;
+}
+
+.admin-card h2 {
+    margin: 0 0 10px;
+    color: var(--chocolate);
+    font-family: "Pacifico", cursive;
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.admin-card p {
+    margin: 0 0 20px;
+    color: var(--texto);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.admin-card strong {
+    color: var(--chocolate);
+    font-size: 0.85rem;
+}
+
+@media (max-width: 750px) {
+
+    .admin-contenido {
+        flex-direction: column;
+    }
+
+    #admin-menu {
+        width: 100%;
+        flex: none;
+    }
+
+    .admin-menu {
+        width: 100%;
+        min-height: auto;
+    }
+
+    .admin-menu nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .admin-menu-footer {
+        margin-top: 20px;
+    }
+
+    .admin-dashboard {
+        padding: 30px 20px;
+    }
+
+    .admin-opciones {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-encabezado h1 {
+        font-size: 2.2rem;
+    }
+}
