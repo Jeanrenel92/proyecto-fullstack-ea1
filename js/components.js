@@ -106,7 +106,7 @@ const footer = `
     </div>
 
     <div class="footer-bottom">
-        <p>© 2026 Todos los derechos reservados.</p>
+        <p>© 2026 Mil Sabores, Todos los derechos reservados.</p>
     </div>
 </footer>
 `;
