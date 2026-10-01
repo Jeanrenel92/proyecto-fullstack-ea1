@@ -3,7 +3,7 @@ const estaEnPages = path.includes('/pages/');
 const base = estaEnPages ? '../' : '';
 
 // 1. Arreglo con las palabras clave de las páginas donde NO queremos el carrito
-const paginasSinCarrito = ['login', 'registro', 'nosotros', 'contacto', 'blog'];
+const paginasSinCarrito = ['login', 'registro', 'nosotros', 'contacto', 'blog', 'admin', 'catalogo_admin', 'usuario_admin'];
 
 // 2. Verificamos si la URL actual contiene alguna de las palabras de la lista
 const ocultarCarrito = paginasSinCarrito.some(pagina => path.includes(pagina));
