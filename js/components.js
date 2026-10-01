@@ -5,8 +5,13 @@ const base = estaEnPages ? '../' : '';
 // 1. Arreglo con las palabras clave de las páginas donde NO queremos el carrito
 const paginasSinCarrito = [
     'admin',
+    'blog',
+    'login',
+    'registro',
     'catalogo_admin',
-    'usuario_admin'
+    'usuario_admin',
+    'nostros',
+    'contacto', 
 ];
 
 // 2. Verificamos si la URL actual contiene alguna de las palabras de la lista
