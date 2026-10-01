@@ -1,5 +1,128 @@
 const CLAVE_USUARIOS = "usuarios";
 
+const USUARIOS_PRUEBA = [
+    {
+        run: "123456785",
+        nombre: "Juan",
+        apellidos: "Pérez González",
+        correo: "juan.perez@gmail.com",
+        fechaNacimiento: "1995-03-15",
+        tipoUsuario: "cliente",
+        region: "Región Metropolitana",
+        comuna: "Santiago",
+        direccion: "Av. Libertador Bernardo O'Higgins 1234",
+        contrasena: "1234"
+    },
+    {
+        run: "987654321",
+        nombre: "María",
+        apellidos: "González Soto",
+        correo: "maria.gonzalez@gmail.com",
+        fechaNacimiento: "1998-07-22",
+        tipoUsuario: "cliente",
+        region: "Región Metropolitana",
+        comuna: "Maipú",
+        direccion: "Av. Pajaritos 2456",
+        contrasena: "1234"
+    },
+    {
+        run: "156789438",
+        nombre: "Carlos",
+        apellidos: "Ramírez Muñoz",
+        correo: "carlos.ramirez@gmail.com",
+        fechaNacimiento: "1992-11-08",
+        tipoUsuario: "cliente",
+        region: "Región de Valparaíso",
+        comuna: "Viña del Mar",
+        direccion: "Calle Valparaíso 890",
+        contrasena: "1234"
+    },
+    {
+        run: "184567325",
+        nombre: "Ana",
+        apellidos: "Martínez Silva",
+        correo: "ana.martinez@gmail.com",
+        fechaNacimiento: "2000-01-30",
+        tipoUsuario: "cliente",
+        region: "Región del Biobío",
+        comuna: "Concepción",
+        direccion: "Av. Los Carrera 567",
+        contrasena: "1234"
+    },
+    {
+        run: "167894320",
+        nombre: "Pedro",
+        apellidos: "Soto Fernández",
+        correo: "pedro.soto@duoc.cl",
+        fechaNacimiento: "1996-05-17",
+        tipoUsuario: "cliente",
+        region: "Región de Coquimbo",
+        comuna: "La Serena",
+        direccion: "Av. Francisco de Aguirre 456",
+        contrasena: "1234"
+    },
+    {
+        run: "203456789",
+        nombre: "Laura",
+        apellidos: "Vargas Rojas",
+        correo: "laura.vargas@gmail.com",
+        fechaNacimiento: "2001-09-12",
+        tipoUsuario: "cliente",
+        region: "Región Metropolitana",
+        comuna: "Puente Alto",
+        direccion: "Av. Concha y Toro 3456",
+        contrasena: "1234"
+    },
+    {
+        run: "145678932",
+        nombre: "Diego",
+        apellidos: "Contreras Pérez",
+        correo: "diego.contreras@gmail.com",
+        fechaNacimiento: "1994-12-03",
+        tipoUsuario: "cliente",
+        region: "Región de O'Higgins",
+        comuna: "Rancagua",
+        direccion: "Av. Brasil 789",
+        contrasena: "1234"
+    },
+    {
+        run: "176543218",
+        nombre: "Camila",
+        apellidos: "Fuentes Morales",
+        correo: "camila.fuentes@duoc.cl",
+        fechaNacimiento: "1999-04-25",
+        tipoUsuario: "cliente",
+        region: "Región Metropolitana",
+        comuna: "San Bernardo",
+        direccion: "Av. Colón 123",
+        contrasena: "1234"
+    },
+    {
+        run: "198765432",
+        nombre: "Felipe",
+        apellidos: "Torres Castillo",
+        correo: "felipe.torres@gmail.com",
+        fechaNacimiento: "1997-08-19",
+        tipoUsuario: "cliente",
+        region: "Región de Valparaíso",
+        comuna: "Quilpué",
+        direccion: "Calle Blanco Encalada 654",
+        contrasena: "1234"
+    },
+    {
+        run: "212345678",
+        nombre: "Administrador",
+        apellidos: "Sistema",
+        correo: "admin@duoc.cl",
+        fechaNacimiento: "1990-01-01",
+        tipoUsuario: "admin",
+        region: "Región Metropolitana",
+        comuna: "Santiago",
+        direccion: "Casa Central",
+        contrasena: "admin123"
+    }
+];
+
 
 function obtenerUsuarios() {
 
@@ -7,7 +130,10 @@ function obtenerUsuarios() {
         localStorage.getItem(CLAVE_USUARIOS);
 
     if (!usuariosGuardados) {
-        return [];
+
+        guardarUsuarios(USUARIOS_PRUEBA);
+
+        return USUARIOS_PRUEBA;
     }
 
     return JSON.parse(usuariosGuardados);
